@@ -1,5 +1,7 @@
 # Research Archive Organization
 
+**Note: This repository contains exploratory ideas and theoretical proposals from independent research. All content should be considered preliminary and subject to peer review.**
+
 This repository has been organized into a logical directory structure for better management and accessibility. Below is the organization scheme:
 
 ## Directory Structure

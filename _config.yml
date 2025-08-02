@@ -1,0 +1,67 @@
+# Site settings
+title: "Research Archive: Consciousness & Quantum Studies"
+description: "Exploratory research into consciousness field theory, quantum amplification, and temporal dynamics"
+author: "Independent Research"
+email: ""
+baseurl: "/Research-Archive"
+url: "https://pelicansperspective.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - index.md
+  - archive.md
+  - frameworks.md
+  - research.md
+
+# Collections
+collections:
+  papers:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "paper"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Exclude from processing
+exclude:
+  - "*.pdf"
+  - "*.py"
+  - "*.tex"
+  - "*.csv"
+  - "*.ipynb"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
