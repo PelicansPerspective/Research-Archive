@@ -3,6 +3,7 @@ layout: default
 title: "Theoretical Frameworks"
 description: "Three core theoretical frameworks exploring consciousness field dynamics, quantum amplification, and hyperchronal time structures"
 permalink: /frameworks/
+scrollspy: true
 ---
 
 # Theoretical Frameworks

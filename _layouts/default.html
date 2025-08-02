@@ -65,19 +65,116 @@
     }
     
     /* Breadcrumbs */
-    .breadcrumbs {
-      margin: 1rem 0;
-      font-size: 0.9rem;
-      color: #666;
+    .breadcrumb-container {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 0.75rem 0;
     }
     
-    .breadcrumbs a {
+    .breadcrumbs {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #6c757d;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .breadcrumb-item {
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .breadcrumb-item a {
       color: #155799;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    
+    .breadcrumb-item a:hover {
+      background-color: #e9ecef;
       text-decoration: none;
     }
     
-    .breadcrumbs a:hover {
-      text-decoration: underline;
+    .breadcrumb-item.current {
+      color: #495057;
+      font-weight: 500;
+      padding: 0.25rem 0.5rem;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 0.5rem;
+      color: #adb5bd;
+    }
+
+    /* Scrollspy Navigation */
+    .scrollspy-container {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 200px;
+      z-index: 1000;
+      display: none;
+    }
+    
+    .scrollspy-container.visible {
+      display: block;
+    }
+    
+    .scrollspy-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #495057;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .scrollspy-nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .scrollspy-nav a {
+      display: block;
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 0.4rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    
+    .scrollspy-nav a:hover {
+      color: #155799;
+      border-left-color: #155799;
+    }
+    
+    .scrollspy-nav a.active {
+      color: #155799;
+      font-weight: 600;
+      border-left-color: #155799;
+      background-color: #f8f9fa;
+    }
+    
+    .scrollspy-nav .level-2 {
+      padding-left: 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .scrollspy-nav .level-3 {
+      padding-left: 1.5rem;
+      font-size: 0.7rem;
     }
     
     /* Enhanced content styling */
@@ -165,6 +262,52 @@
         padding: 0.5rem 0.75rem;
         font-size: 0.9rem;
       }
+      
+      .breadcrumb-container {
+        padding: 0.5rem 1rem;
+      }
+      
+      .breadcrumbs {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+      
+      .breadcrumb-separator {
+        margin: 0 0.25rem;
+      }
+      
+      .scrollspy-container {
+        display: none !important; /* Hide on mobile */
+      }
+      
+      .scrollspy-container.mobile-visible {
+        position: static;
+        transform: none;
+        margin: 1rem 0;
+        max-width: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        background: #f8f9fa;
+        border-top: 1px solid #e9ecef;
+        border-bottom: 1px solid #e9ecef;
+      }
+    }
+    
+    /* Print styles */
+    @media print {
+      .navigation,
+      .breadcrumb-container,
+      .scrollspy-container,
+      .site-footer {
+        display: none;
+      }
+      
+      .main-content {
+        margin: 0;
+        padding: 0;
+      }
     }
   </style>
 </head>
@@ -190,6 +333,45 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb-container">
+    <div class="container">
+      <nav class="breadcrumbs" id="breadcrumbs">
+        <span class="breadcrumb-item">
+          <a href="/">🏠 Home</a>
+        </span>
+        {% if page.url != "/" %}
+          <span class="breadcrumb-separator">›</span>
+          {% assign url_parts = page.url | split: '/' %}
+          {% assign current_path = '' %}
+          {% for part in url_parts %}
+            {% unless part == '' %}
+              {% assign current_path = current_path | append: '/' | append: part %}
+              {% if forloop.last %}
+                <span class="breadcrumb-item current">{{ page.title | default: part | capitalize }}</span>
+              {% else %}
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item">
+                  <a href="{{ current_path }}">{{ part | capitalize }}</a>
+                </span>
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Scrollspy Navigation for longer pages -->
+  {% if page.scrollspy %}
+  <div class="scrollspy-container" id="scrollspy-nav">
+    <div class="scrollspy-title">On this page:</div>
+    <nav class="scrollspy-nav">
+      <!-- Will be populated by JavaScript -->
+    </nav>
+  </div>
+  {% endif %}
 
   <!-- Breadcrumbs -->
   {% unless page.url == '/' %}
@@ -229,7 +411,7 @@
     </div>
   </footer>
 
-  <!-- Simple search functionality -->
+  <!-- Enhanced navigation and scrollspy functionality -->
   <script>
     // Simple search highlighting
     function highlightSearchTerm() {
@@ -244,9 +426,162 @@
         }
       }
     }
-    
-    // Run on page load
-    document.addEventListener('DOMContentLoaded', highlightSearchTerm);
+
+    // Scrollspy functionality
+    function initializeScrollspy() {
+      const scrollspyContainer = document.getElementById('scrollspy-nav');
+      if (!scrollspyContainer) return;
+
+      const content = document.querySelector('.main-content');
+      if (!content) return;
+
+      // Find all headings h2, h3, h4
+      const headings = content.querySelectorAll('h2, h3, h4');
+      if (headings.length === 0) return;
+
+      // Build navigation
+      const nav = scrollspyContainer.querySelector('.scrollspy-nav');
+      nav.innerHTML = '';
+
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          heading.id = `heading-${index}`;
+        }
+
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent;
+        link.className = `level-${heading.tagName.slice(1)}`;
+        
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          heading.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, `#${heading.id}`);
+        });
+
+        nav.appendChild(link);
+      });
+
+      // Show scrollspy for pages with multiple headings
+      if (headings.length >= 3) {
+        scrollspyContainer.classList.add('visible');
+      }
+
+      // Update active state on scroll
+      let ticking = false;
+      function updateActiveHeading() {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrollPos = window.scrollY + 100;
+            let activeHeading = null;
+
+            headings.forEach(heading => {
+              if (heading.offsetTop <= scrollPos) {
+                activeHeading = heading;
+              }
+            });
+
+            // Remove all active classes
+            nav.querySelectorAll('a').forEach(link => {
+              link.classList.remove('active');
+            });
+
+            // Add active class to current heading
+            if (activeHeading) {
+              const activeLink = nav.querySelector(`a[href="#${activeHeading.id}"]`);
+              if (activeLink) {
+                activeLink.classList.add('active');
+              }
+            }
+
+            ticking = false;
+          });
+        }
+        ticking = true;
+      }
+
+      window.addEventListener('scroll', updateActiveHeading);
+      updateActiveHeading(); // Initial call
+    }
+
+    // Enhanced breadcrumb functionality
+    function enhanceBreadcrumbs() {
+      const breadcrumbs = document.getElementById('breadcrumbs');
+      if (!breadcrumbs) return;
+
+      // Add context-aware breadcrumbs based on page type
+      const path = window.location.pathname;
+      const contextualCrumbs = [];
+
+      if (path.includes('/frameworks')) {
+        contextualCrumbs.push({ title: 'Theoretical Frameworks', url: '/frameworks' });
+      } else if (path.includes('/research')) {
+        contextualCrumbs.push({ title: 'Research Projects', url: '/research' });
+      } else if (path.includes('/archive')) {
+        contextualCrumbs.push({ title: 'Archive', url: '/archive' });
+      } else if (path.includes('/search')) {
+        contextualCrumbs.push({ title: 'Search', url: '/search' });
+      } else if (path.includes('/collaboration')) {
+        contextualCrumbs.push({ title: 'Collaboration', url: '/collaboration' });
+      } else if (path.includes('/_papers/')) {
+        contextualCrumbs.push({ title: 'Papers', url: '/archive#papers' });
+      }
+
+      // Add framework-specific context
+      if (path.includes('cfh')) {
+        contextualCrumbs.push({ title: 'CFH Framework', url: '/frameworks#consciousness-field-hypothesis-cfh' });
+      } else if (path.includes('qca') || path.includes('qcap')) {
+        contextualCrumbs.push({ title: 'QCA Framework', url: '/frameworks#quantum-consciousness-amplification-qca' });
+      } else if (path.includes('hqt')) {
+        contextualCrumbs.push({ title: 'HQT Framework', url: '/frameworks#hyperchronal-quantum-theory-hqt' });
+      }
+
+      // Insert contextual breadcrumbs if we have them
+      if (contextualCrumbs.length > 0) {
+        const homeLink = breadcrumbs.querySelector('.breadcrumb-item a[href="/"]');
+        if (homeLink) {
+          const homeItem = homeLink.parentElement;
+          
+          contextualCrumbs.forEach(crumb => {
+            const separator = document.createElement('span');
+            separator.className = 'breadcrumb-separator';
+            separator.textContent = '›';
+            
+            const item = document.createElement('span');
+            item.className = 'breadcrumb-item';
+            
+            const link = document.createElement('a');
+            link.href = crumb.url;
+            link.textContent = crumb.title;
+            
+            item.appendChild(link);
+            
+            homeItem.insertAdjacentElement('afterend', separator);
+            separator.insertAdjacentElement('afterend', item);
+          });
+        }
+      }
+    }
+
+    // Mobile navigation toggle
+    function initializeMobileNav() {
+      const navContainer = document.querySelector('.nav-container');
+      if (window.innerWidth <= 768) {
+        // Add mobile menu toggle if needed
+        // This would expand based on mobile menu requirements
+      }
+    }
+
+    // Initialize all navigation enhancements
+    document.addEventListener('DOMContentLoaded', () => {
+      highlightSearchTerm();
+      initializeScrollspy();
+      enhanceBreadcrumbs();
+      initializeMobileNav();
+    });
+
+    // Handle window resize for mobile navigation
+    window.addEventListener('resize', initializeMobileNav);
   </script>
 </body>
 
