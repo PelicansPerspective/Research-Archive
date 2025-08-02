@@ -9,20 +9,42 @@ url: "https://pelicansperspective.github.io"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+remote_theme: pages-themes/cayman@v0.2.0
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-relative-links
+
+# SEO and metadata
+lang: en-US
+keywords: "consciousness field hypothesis, quantum consciousness amplification, hyperchronal quantum theory, consciousness research, quantum physics, theoretical frameworks"
+social:
+  name: Research Archive
+  links:
+    - https://github.com/PelicansPerspective/Research-Archive
+
+# Google Analytics (add your tracking ID when ready)
+# google_analytics: UA-XXXXXXXX-X
 
 # Navigation
-header_pages:
-  - index.md
-  - archive.md
-  - frameworks.md
-  - research.md
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Frameworks"
+    url: "/frameworks"
+  - title: "Research Projects"
+    url: "/research"
+  - title: "Complete Archive"
+    url: "/archive"
+  - title: "Search"
+    url: "/search"
+  - title: "Collaboration"
+    url: "/collaboration"
+
+# Header pages
 
 # Collections
 collections:
