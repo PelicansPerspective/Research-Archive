@@ -1,0 +1,362 @@
+---
+layout: default
+---
+
+<article class="document-page">
+  <!-- Document Header -->
+  <header class="document-header">
+    <h1>{{ page.title }}</h1>
+    
+    <div class="document-metadata">
+      <div class="metadata-grid">
+        <div class="status-info">
+          <span class="status-badge status-{{ page.status }}">{{ page.status | upcase }}</span>
+          <span class="version">v{{ page.version }}</span>
+          <span class="last-updated">Updated: {{ page.last_updated | date: "%B %d, %Y" }}</span>
+        </div>
+        
+        {% if page.authors %}
+        <div class="authors">
+          <strong>Authors:</strong> {{ page.authors | join: ', ' }}
+        </div>
+        {% endif %}
+        
+        {% if page.categories %}
+        <div class="categories">
+          <strong>Categories:</strong> 
+          {% for category in page.categories %}
+            <span class="category-tag">{{ category }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if page.tags %}
+        <div class="tags">
+          <strong>Tags:</strong>
+          {% for tag in page.tags %}
+            <a href="/tags/{{ tag | slugify }}" class="tag-link">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <!-- Abstract -->
+  {% if page.abstract %}
+  <section class="abstract-section">
+    <h2>Abstract</h2>
+    <div class="abstract-content">
+      {{ page.abstract }}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Download & Citation -->
+  <section class="document-actions">
+    {% if page.pdf_file %}
+    <div class="download-section">
+      <h3>Download</h3>
+      <a href="../{{ page.collection }}/{{ page.pdf_file }}" class="download-button" download>
+        📄 Download PDF
+        {% if page.file_size %}<span class="file-size">({{ page.file_size }})</span>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    <div class="citation-section">
+      <h3>Citation</h3>
+      <details class="citation-details">
+        <summary>Show Citation Formats</summary>
+        
+        <div class="citation-format">
+          <h4>BibTeX</h4>
+          <pre class="citation-code"><code>@article{{{ page.title | slugify }}_{{ page.last_updated | date: "%Y" }},
+  title={ {{ page.title }} },
+  author={ {{ page.authors | join: ' and ' | default: 'Independent Research' }} },
+  year={ {{ page.last_updated | date: "%Y" }} },
+  status={ {{ page.status | capitalize }} },
+  url={https://pelicansperspective.github.io/Research-Archive/papers/{{ page.slug }}}
+}</code></pre>
+          <button onclick="copyToClipboard('bibtex')" class="copy-button">📋 Copy BibTeX</button>
+        </div>
+
+        <div class="citation-format">
+          <h4>APA Style</h4>
+          <p class="citation-text" id="apa-citation">
+            {{ page.authors | join: ', ' | default: 'Independent Research' }}. ({{ page.last_updated | date: "%Y" }}). 
+            <em>{{ page.title }}</em>. Research Archive. 
+            Retrieved from https://pelicansperspective.github.io/Research-Archive/papers/{{ page.slug }}
+          </p>
+          <button onclick="copyToClipboard('apa')" class="copy-button">📋 Copy APA</button>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="document-content">
+    {{ content }}
+  </main>
+
+  <!-- Related Documents -->
+  {% if page.related %}
+  <section class="related-section">
+    <h2>Related Documents</h2>
+    <div class="related-grid">
+      {% for related in page.related %}
+        <div class="related-card">
+          <a href="{{ related.url }}">{{ related.title }}</a>
+          <p>{{ related.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Navigation -->
+  <nav class="document-navigation">
+    <a href="/frameworks" class="nav-back">← Back to Frameworks</a>
+    <a href="/archive" class="nav-archive">View All Documents →</a>
+  </nav>
+</article>
+
+<style>
+.document-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.document-header {
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.document-metadata {
+  margin-top: 1rem;
+}
+
+.metadata-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-draft {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-published {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.version, .last-updated {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.category-tag {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.tag-link {
+  display: inline-block;
+  color: #155799;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.tag-link:hover {
+  text-decoration: underline;
+}
+
+.abstract-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.abstract-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #495057;
+}
+
+.document-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.download-button {
+  display: inline-block;
+  background: #155799;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background: #0d3f66;
+}
+
+.file-size {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.citation-details {
+  margin-top: 0.5rem;
+}
+
+.citation-format {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.citation-code {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.citation-text {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #155799;
+}
+
+.copy-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.copy-button:hover {
+  background: #218838;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.related-card {
+  border: 1px solid #e9ecef;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #f8f9fa;
+}
+
+.related-card a {
+  color: #155799;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.related-card a:hover {
+  text-decoration: underline;
+}
+
+.document-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e9ecef;
+}
+
+.nav-back, .nav-archive {
+  color: #155799;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-back:hover, .nav-archive:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .document-actions {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .status-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .document-navigation {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+function copyToClipboard(type) {
+  let text;
+  if (type === 'bibtex') {
+    text = document.querySelector('.citation-code code').textContent;
+  } else if (type === 'apa') {
+    text = document.querySelector('#apa-citation').textContent;
+  }
+  
+  navigator.clipboard.writeText(text).then(() => {
+    // Show feedback
+    const button = event.target;
+    const originalText = button.textContent;
+    button.textContent = '✓ Copied!';
+    button.style.background = '#28a745';
+    
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.style.background = '';
+    }, 2000);
+  });
+}
+</script>
