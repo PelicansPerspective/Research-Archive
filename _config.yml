@@ -1,0 +1,217 @@
+# Research Archive Configuration
+title: "Research Archive"
+description: "Consciousness Field Hypothesis Research Archive - Comprehensive documentation of theoretical frameworks, experimental protocols, and foundational concepts exploring consciousness as a scientifically investigable phenomenon."
+baseurl: ""
+url: "https://pelicansperspective.github.io/Research-Archive"
+
+# Site Settings
+lang: en-US
+timezone: America/New_York
+encoding: utf-8
+
+# GitHub Pages / Jekyll Settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  core_papers:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true  
+    permalink: /:collection/:name/
+  transcripts:
+    output: true
+    permalink: /:collection/:name/
+  code:
+    output: true
+    permalink: /:collection/:name/
+  external:
+    output: true
+    permalink: /:collection/:name/
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Core Theories"
+    url: "/00_Documentation/theories/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Search"
+    url: "/search.html"
+  - title: "Archive"
+    url: "/archive/"
+
+# Search Configuration
+search:
+  enabled: true
+  provider: "lunr" # client-side search
+  lunr:
+    search_within: "content"
+    search_full_content: true
+    results_max: 50
+
+# Archive Statistics
+archive:
+  total_documents: 147
+  categories:
+    - name: "CFH Series"
+      count: 9
+      description: "Consciousness Field Hypothesis core papers"
+    - name: "HQT Series" 
+      count: 2
+      description: "Hyperchronal Quantum Theory"
+    - name: "OBS Series"
+      count: 1
+      description: "Observer-Architect Theory"
+    - name: "QCA Project"
+      count: 8
+      description: "Quantum Consciousness Amplification"
+    - name: "NEXUS Project"
+      count: 7
+      description: "NEXUS framework development"
+    - name: "ECUR Project"
+      count: 4
+      description: "AI transcendence framework"
+    - name: "AI Conversations"
+      count: 9
+      description: "Transcripts and AI interactions"
+    - name: "Code & Simulations"
+      count: 4
+      description: "Python scripts and data"
+    - name: "External References"
+      count: 4
+      description: "Academic papers and analyses"
+
+# SEO and Meta
+author: "Research Archive Team"
+twitter:
+  username: research_archive
+  card: summary_large_image
+
+social:
+  name: Research Archive
+  links:
+    - https://github.com/pelicansperspective/Research-Archive
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .vs/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - "*.crdownload"
+
+# Include
+include:
+  - _pages
+  - .htaccess
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "modern"
+      author: "Research Archive Team"
+  - scope:
+      path: ""
+      type: "pages"  
+    values:
+      layout: "modern"
+  - scope:
+      path: "01_Core_Papers"
+    values:
+      category: "CFH"
+      layout: "document"
+  - scope:
+      path: "02_QCAP_Project"
+    values:
+      category: "QCA"
+      layout: "document"
+  - scope:
+      path: "03_NEXUS_Project"
+    values:
+      category: "NEX"
+      layout: "document"
+  - scope:
+      path: "04_ECUR_Project"
+    values:
+      category: "ECU"
+      layout: "document"
+  - scope:
+      path: "05_Transcripts_and_Conversations"
+    values:
+      category: "AI"
+      layout: "document"
+  - scope:
+      path: "06_Code_and_Simulations"
+    values:
+      category: "Code"
+      layout: "document"
+  - scope:
+      path: "08_External_References"
+    values:
+      category: "External"
+      layout: "document"
+
+# Document Index Configuration
+index:
+  auto_generate: true
+  update_frequency: "daily"
+  include_content: true
+  search_fields:
+    - "title"
+    - "description" 
+    - "content"
+    - "keywords"
+    - "category"
+  facets:
+    - "category"
+    - "type"
+    - "phase" 
+    - "status"
+  cross_references:
+    auto_detect: true
+    citation_format: "academic"
+    
+# Theme Configuration  
+theme_config:
+  primary_color: "#3b82f6"
+  secondary_color: "#8b5cf6"
+  accent_color: "#06b6d4"
+  background_dark: "#0f172a"
+  text_primary: "#f8fafc"
+  show_edit_page: false
+  show_date: true
+  show_author: true
+  show_category: true
+  show_tags: true
+
+# Analytics (optional)
+google_analytics: # Add if needed
+google_site_verification: # Add if needed

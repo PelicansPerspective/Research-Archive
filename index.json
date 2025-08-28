@@ -1,0 +1,695 @@
+{
+  "metadata": {
+    "title": "Research Archive Cross-Reference Database",
+    "description": "Machine-readable index of all documents in the consciousness field hypothesis research archive",
+    "version": "1.0",
+    "lastUpdated": "2025-08-28",
+    "totalDocuments": 147,
+    "categories": ["CFH", "HQT", "OBS", "QCA", "NEX", "ECU", "AI", "Code", "External", "Archive"],
+    "documentTypes": ["PDF", "Markdown", "Text", "Python", "CSV", "LaTeX"],
+    "encoding": "UTF-8"
+  },
+  "taxonomies": {
+    "primaryConcepts": [
+      "consciousness field hypothesis",
+      "quantum consciousness amplification", 
+      "hyperchronal quantum theory",
+      "observer architect theory",
+      "participatory physics",
+      "scalar field modeling",
+      "epistemological foundations",
+      "ontological frameworks"
+    ],
+    "researchPhases": [
+      "Foundation (CFH Series)",
+      "Expansion (HQT & OBS)",
+      "Application (QCA Project)", 
+      "Implementation (NEXUS & ECUR)",
+      "Validation (AI Conversations)"
+    ],
+    "methodologies": [
+      "theoretical framework development",
+      "mathematical modeling",
+      "AI-assisted research",
+      "cross-validation studies",
+      "simulation-based analysis"
+    ]
+  },
+  "documents": [
+    {
+      "id": "CFH_01",
+      "title": "CFH_01 - Participatory Framework Main",
+      "filename": "CFH_Participatory_Framework_Main.pdf",
+      "path": "01_Core_Papers/CFH_Participatory_Framework_Main.pdf",
+      "category": "CFH",
+      "subcategory": "Core Theory",
+      "type": "PDF",
+      "phase": "Foundation",
+      "status": "Complete",
+      "description": "Core participatory framework for consciousness field hypothesis",
+      "abstract": "Establishes the foundational participatory framework that positions consciousness as an active field that participates in physical reality construction rather than merely observing it.",
+      "keywords": ["consciousness", "field", "hypothesis", "participatory", "framework", "reality construction"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q1",
+      "lastModified": "2024-Q2",
+      "size": "1.2MB",
+      "pageCount": 45,
+      "language": "English",
+      "dependencies": {
+        "conceptual": [],
+        "technical": [],
+        "methodological": []
+      },
+      "crossReferences": {
+        "citedBy": ["HQT_01", "OBS_01", "QCA_01", "NEX_01"],
+        "cites": [],
+        "relatedConcepts": ["participatory universe", "observer effects", "consciousness causation"],
+        "relatedDocuments": ["CFH_02", "CFH_05", "OBS_01"]
+      },
+      "research": {
+        "methodology": "theoretical framework development",
+        "approach": "interdisciplinary synthesis",
+        "validation": "logical consistency analysis",
+        "applications": ["QCA development", "NEXUS framework"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["basic physics", "consciousness studies"],
+        "readingTime": "90 minutes"
+      }
+    },
+    {
+      "id": "CFH_02", 
+      "title": "CFH_02 - Physics Participation Coherence",
+      "filename": "CFH_Physics_Participation_Coherence.pdf",
+      "path": "01_Core_Papers/CFH_Physics_Participation_Coherence.pdf",
+      "category": "CFH",
+      "subcategory": "Physics Integration",
+      "type": "PDF",
+      "phase": "Foundation",
+      "status": "Complete",
+      "description": "Physics and coherence analysis within participatory framework",
+      "abstract": "Analyzes how consciousness field participation maintains coherence with established physics principles while extending current theoretical boundaries.",
+      "keywords": ["physics", "participation", "coherence", "consciousness", "field dynamics"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q1",
+      "lastModified": "2024-Q2", 
+      "size": "980KB",
+      "pageCount": 38,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01"],
+        "technical": ["quantum mechanics", "field theory"],
+        "methodological": ["mathematical modeling"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_02", "HQT_02", "CFH_05"],
+        "cites": ["CFH_01"],
+        "relatedConcepts": ["quantum coherence", "field interactions", "measurement problem"],
+        "relatedDocuments": ["CFH_01", "CFH_03", "QCA_Complete"]
+      },
+      "research": {
+        "methodology": "mathematical physics analysis",
+        "approach": "coherence preservation",
+        "validation": "consistency with known physics",
+        "applications": ["QCA amplification models", "HQT time integration"]
+      },
+      "accessibility": {
+        "technicalLevel": "Expert",
+        "prerequisites": ["advanced physics", "field theory", "CFH_01"],
+        "readingTime": "75 minutes"
+      }
+    },
+    {
+      "id": "CFH_03",
+      "title": "CFH_03 - Amplification Model Core", 
+      "filename": "CFH_Amplification_Model_Core.pdf",
+      "path": "01_Core_Papers/CFH_Amplification_Model_Core.pdf",
+      "category": "CFH",
+      "subcategory": "Amplification Theory",
+      "type": "PDF", 
+      "phase": "Foundation",
+      "status": "Complete",
+      "description": "Field amplification models and mechanisms",
+      "abstract": "Develops mathematical models for consciousness field amplification effects, establishing the theoretical basis for quantum consciousness amplification protocols.",
+      "keywords": ["amplification", "model", "field", "consciousness", "quantum effects"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q1",
+      "lastModified": "2024-Q2",
+      "size": "1.1MB", 
+      "pageCount": 42,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_02"],
+        "technical": ["quantum amplification", "field dynamics"],
+        "methodological": ["mathematical modeling", "simulation"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_03", "NEX_01", "QCA_Complete"],
+        "cites": ["CFH_01", "CFH_02"],
+        "relatedConcepts": ["field amplification", "quantum enhancement", "consciousness scaling"],
+        "relatedDocuments": ["QCA_Main_v1", "QCA_Scalar", "NEX_Main_v1"]
+      },
+      "research": {
+        "methodology": "theoretical modeling with simulation validation",
+        "approach": "amplification mechanism analysis", 
+        "validation": "mathematical consistency and simulation testing",
+        "applications": ["QCA protocol development", "NEXUS amplification systems"]
+      },
+      "accessibility": {
+        "technicalLevel": "Expert",
+        "prerequisites": ["CFH_01", "CFH_02", "quantum mechanics"],
+        "readingTime": "85 minutes"
+      }
+    },
+    {
+      "id": "CFH_04",
+      "title": "CFH_04 - Foundational Paradoxes Analysis",
+      "filename": "CFH_Foundational_Paradoxes_Analysis.pdf", 
+      "path": "01_Core_Papers/CFH_Foundational_Paradoxes_Analysis.pdf",
+      "category": "CFH",
+      "subcategory": "Paradox Resolution",
+      "type": "PDF",
+      "phase": "Foundation", 
+      "status": "Complete",
+      "description": "Analysis and resolution of foundational paradoxes in consciousness field theory",
+      "abstract": "Identifies and analyzes key paradoxes arising from consciousness field hypothesis, developing resolution strategies that maintain theoretical consistency.",
+      "keywords": ["paradox", "analysis", "foundational", "consciousness", "resolution"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q1",
+      "lastModified": "2024-Q2",
+      "size": "875KB",
+      "pageCount": 34,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_02", "CFH_03"],
+        "technical": ["logical analysis", "paradox theory"],
+        "methodological": ["systematic analysis"]
+      },
+      "crossReferences": {
+        "citedBy": ["HQT_01", "OBS_01", "CFH_06"],
+        "cites": ["CFH_01", "CFH_02", "CFH_03"],
+        "relatedConcepts": ["measurement paradox", "observer paradox", "causation loops"],
+        "relatedDocuments": ["HQT_01", "OBS_01", "CFH_05"]
+      },
+      "research": {
+        "methodology": "systematic paradox analysis",
+        "approach": "resolution through framework refinement",
+        "validation": "logical consistency verification",
+        "applications": ["HQT development", "OBS theory refinement"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["CFH_01-03", "logic", "philosophy of science"],
+        "readingTime": "70 minutes"
+      }
+    },
+    {
+      "id": "CFH_05",
+      "title": "CFH_05 - Unified Field Theory Complete",
+      "filename": "CFH_Unified_Field_Theory_Complete.pdf",
+      "path": "01_Core_Papers/CFH_Unified_Field_Theory_Complete.pdf", 
+      "category": "CFH",
+      "subcategory": "Unified Theory",
+      "type": "PDF",
+      "phase": "Expansion",
+      "status": "Complete",
+      "description": "Complete unified field theory integrating consciousness with physics",
+      "abstract": "Presents the complete unified field theory that integrates consciousness field hypothesis with established physics, providing comprehensive theoretical framework.",
+      "keywords": ["unified", "field", "theory", "complete", "consciousness", "physics integration"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "1.8MB",
+      "pageCount": 67,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_02", "CFH_03", "CFH_04"],
+        "technical": ["unified field theory", "advanced physics"],
+        "methodological": ["theoretical synthesis"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_v2", "QCA_v3", "QCA_Complete", "NEX_v2", "HQT_02"],
+        "cites": ["CFH_01", "CFH_02", "CFH_03", "CFH_04"],
+        "relatedConcepts": ["unified field", "consciousness-physics integration", "theoretical completeness"],
+        "relatedDocuments": ["All_series_integration"]
+      },
+      "research": {
+        "methodology": "comprehensive theoretical synthesis",
+        "approach": "unification through consciousness field integration",
+        "validation": "mathematical consistency and predictive power",
+        "applications": ["All subsequent research", "QCA development", "NEXUS framework"]
+      },
+      "accessibility": {
+        "technicalLevel": "Expert",
+        "prerequisites": ["CFH_01-04", "advanced physics", "field theory"],
+        "readingTime": "135 minutes"
+      }
+    },
+    {
+      "id": "CFH_06",
+      "title": "CFH_06 - Ontological Manifesto Core",
+      "filename": "CFH_Ontological_Manifesto_Core.pdf",
+      "path": "01_Core_Papers/CFH_Ontological_Manifesto_Core.pdf",
+      "category": "CFH", 
+      "subcategory": "Ontological Foundations",
+      "type": "PDF",
+      "phase": "Expansion",
+      "status": "Complete",
+      "description": "Ontological foundations and philosophical framework",
+      "abstract": "Establishes the ontological foundations underlying consciousness field hypothesis, addressing fundamental questions of being, existence, and consciousness nature.",
+      "keywords": ["ontological", "manifesto", "foundations", "consciousness", "being", "existence"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "1.3MB",
+      "pageCount": 51,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_04", "CFH_05"],
+        "technical": ["ontology", "metaphysics"],
+        "methodological": ["philosophical analysis"]
+      },
+      "crossReferences": {
+        "citedBy": ["HQT_01", "OBS_01"],
+        "cites": ["CFH_01", "CFH_04", "CFH_05"],
+        "relatedConcepts": ["ontological frameworks", "being and consciousness", "metaphysical foundations"],
+        "relatedDocuments": ["HQT_01", "OBS_01", "External_epistemological"]
+      },
+      "research": {
+        "methodology": "philosophical analysis and synthesis",
+        "approach": "ontological framework development",
+        "validation": "logical consistency and coherence",
+        "applications": ["HQT ontological grounding", "OBS theoretical foundation"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["CFH_01-05", "philosophy", "ontology"],
+        "readingTime": "105 minutes"
+      }
+    },
+    {
+      "id": "CFH_07",
+      "title": "CFH_07 - Scale Consciousness Miniscule",
+      "filename": "CFH_Scale_Consciousness_Miniscule.pdf",
+      "path": "01_Core_Papers/CFH_Scale_Consciousness_Miniscule.pdf",
+      "category": "CFH",
+      "subcategory": "Scale Analysis",
+      "type": "PDF",
+      "phase": "Application",
+      "status": "Complete", 
+      "description": "Scale consciousness research and miniscule field effects",
+      "abstract": "Investigates consciousness field effects at different scales, with particular focus on miniscule scale phenomena and their amplification potential.",
+      "keywords": ["scale", "consciousness", "miniscule", "research", "field effects"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "765KB",
+      "pageCount": 29,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_03", "CFH_05"],
+        "technical": ["scale analysis", "field dynamics"],
+        "methodological": ["multi-scale modeling"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_Scalar"],
+        "cites": ["CFH_01", "CFH_03", "CFH_05"],
+        "relatedConcepts": ["scale effects", "miniscule phenomena", "field scaling"],
+        "relatedDocuments": ["QCA_Scalar", "External_Scalar_Field"]
+      },
+      "research": {
+        "methodology": "multi-scale analysis",
+        "approach": "scale-dependent field modeling",
+        "validation": "cross-scale consistency verification",
+        "applications": ["QCA scalar field modeling", "Neural consciousness models"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["CFH_01-05", "scale analysis", "field theory"],
+        "readingTime": "60 minutes"
+      }
+    },
+    {
+      "id": "CFH_08",
+      "title": "CFH_08 - Science Speaks Epistemological",
+      "filename": "CFH_Science_Speaks_Epistemological.pdf",
+      "path": "01_Core_Papers/CFH_Science_Speaks_Epistemological.pdf",
+      "category": "CFH",
+      "subcategory": "Epistemological Framework",
+      "type": "PDF",
+      "phase": "Validation",
+      "status": "Complete",
+      "description": "Epistemological foundations and scientific methodology",
+      "abstract": "Establishes the epistemological framework for consciousness field hypothesis research, addressing questions of knowledge, evidence, and scientific validation.",
+      "keywords": ["science", "epistemological", "foundations", "consciousness", "methodology"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q3",
+      "lastModified": "2024-Q3",
+      "size": "920KB",
+      "pageCount": 36,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01-07"],
+        "technical": ["epistemology", "scientific method"],
+        "methodological": ["validation frameworks"]
+      },
+      "crossReferences": {
+        "citedBy": ["External_Crane_Molloy"],
+        "cites": ["CFH_01", "CFH_05", "CFH_06"],
+        "relatedConcepts": ["epistemological foundations", "scientific validation", "knowledge frameworks"],
+        "relatedDocuments": ["External_Crane_Molloy", "AI_validation_conversations"]
+      },
+      "research": {
+        "methodology": "epistemological analysis",
+        "approach": "scientific validation framework development",
+        "validation": "peer review and external validation",
+        "applications": ["Research methodology", "Validation protocols"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["CFH series", "epistemology", "philosophy of science"],
+        "readingTime": "75 minutes"
+      }
+    },
+    {
+      "id": "CFH_09",
+      "title": "CFH_09 - Silence Speaks Consciousness Vision",
+      "filename": "CFH_Silence_Speaks_Consciousness_Vision.pdf",
+      "path": "01_Core_Papers/CFH_Silence_Speaks_Consciousness_Vision.pdf",
+      "category": "CFH",
+      "subcategory": "Vision Framework", 
+      "type": "PDF",
+      "phase": "Implementation",
+      "status": "Complete",
+      "description": "Consciousness vision framework and future directions",
+      "abstract": "Presents the vision framework for consciousness field hypothesis, outlining future research directions and implementation strategies.",
+      "keywords": ["silence", "consciousness", "vision", "framework", "future directions"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q3",
+      "lastModified": "2024-Q3",
+      "size": "1.1MB",
+      "pageCount": 44,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01-08"],
+        "technical": ["vision development", "strategic planning"],
+        "methodological": ["future research planning"]
+      },
+      "crossReferences": {
+        "citedBy": ["NEX_02"],
+        "cites": ["CFH_01", "CFH_05", "CFH_08"],
+        "relatedConcepts": ["consciousness vision", "future research", "implementation strategy"],
+        "relatedDocuments": ["NEX_v2", "ECUR_framework"]
+      },
+      "research": {
+        "methodology": "vision development and strategic planning",
+        "approach": "future-oriented framework design",
+        "validation": "strategic coherence analysis",
+        "applications": ["NEXUS development", "ECUR implementation", "Future research"]
+      },
+      "accessibility": {
+        "technicalLevel": "Intermediate",
+        "prerequisites": ["CFH series overview", "strategic thinking"],
+        "readingTime": "90 minutes"
+      }
+    },
+    {
+      "id": "HQT_01",
+      "title": "HQT_01 - Hyperchronal Ontology Inversion",
+      "filename": "HQT_Hyperchronal_Ontology_Inversion.pdf",
+      "path": "01_Core_Papers/HQT_Hyperchronal_Ontology_Inversion.pdf",
+      "category": "HQT",
+      "subcategory": "Hyperchronal Theory",
+      "type": "PDF",
+      "phase": "Expansion",
+      "status": "Complete",
+      "description": "Hyperchronal ontology and time inversion principles",
+      "abstract": "Develops hyperchronal quantum theory focusing on ontological inversion principles and time-consciousness interactions within the CFH framework.",
+      "keywords": ["hyperchronal", "ontology", "time", "inversion", "quantum", "consciousness"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "1.4MB",
+      "pageCount": 56,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_04", "CFH_06", "OBS_01"],
+        "technical": ["quantum mechanics", "time theory", "ontology"],
+        "methodological": ["temporal analysis"]
+      },
+      "crossReferences": {
+        "citedBy": ["HQT_02", "QCA_Complete"],
+        "cites": ["CFH_04", "CFH_06", "OBS_01"],
+        "relatedConcepts": ["hyperchronal effects", "time inversion", "ontological frameworks"],
+        "relatedDocuments": ["HQT_02", "CFH_06", "OBS_01"]
+      },
+      "research": {
+        "methodology": "hyperchronal theoretical development",
+        "approach": "time-consciousness integration analysis",
+        "validation": "temporal consistency verification",
+        "applications": ["QCA temporal aspects", "Consciousness-time modeling"]
+      },
+      "accessibility": {
+        "technicalLevel": "Expert",
+        "prerequisites": ["CFH_04-06", "quantum mechanics", "time theory"],
+        "readingTime": "115 minutes"
+      }
+    },
+    {
+      "id": "HQT_02",
+      "title": "HQT_02 - Time Recursive Depth Original",
+      "filename": "HQT_Time_Recursive_Depth_Original.pdf",
+      "path": "01_Core_Papers/HQT_Time_Recursive_Depth_Original.pdf",
+      "category": "HQT",
+      "subcategory": "Recursive Depth",
+      "type": "PDF",
+      "phase": "Application",
+      "status": "Complete",
+      "description": "Time recursive depth analysis and applications",
+      "abstract": "Analyzes recursive depth properties in time-consciousness interactions, developing mathematical models for temporal recursion effects.",
+      "keywords": ["time", "recursive", "depth", "analysis", "quantum", "consciousness"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "1.2MB",
+      "pageCount": 48,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_02", "QCA_02", "HQT_01"],
+        "technical": ["recursive analysis", "temporal modeling"],
+        "methodological": ["mathematical recursion"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_v2", "CFH_05"],
+        "cites": ["CFH_02", "QCA_02", "HQT_01"],
+        "relatedConcepts": ["temporal recursion", "recursive depth", "time modeling"],
+        "relatedDocuments": ["HQT_01", "QCA_v2", "CFH_02"]
+      },
+      "research": {
+        "methodology": "recursive temporal analysis",
+        "approach": "mathematical depth modeling",
+        "validation": "recursive consistency verification",
+        "applications": ["QCA temporal enhancement", "Consciousness modeling"]
+      },
+      "accessibility": {
+        "technicalLevel": "Expert",
+        "prerequisites": ["HQT_01", "CFH_02", "mathematical recursion"],
+        "readingTime": "95 minutes"
+      }
+    },
+    {
+      "id": "OBS_01",
+      "title": "OBS_01 - Observer Architect Theory", 
+      "filename": "OBS_Observer_Architect_Theory.pdf",
+      "path": "01_Core_Papers/OBS_Observer_Architect_Theory.pdf",
+      "category": "OBS",
+      "subcategory": "Observer Theory",
+      "type": "PDF",
+      "phase": "Expansion",
+      "status": "Complete",
+      "description": "Observer as architect theory and framework",
+      "abstract": "Develops observer-architect theory positioning consciousness as active architect of reality rather than passive observer, integrating with CFH framework.",
+      "keywords": ["observer", "architect", "theory", "consciousness", "reality construction"],
+      "authors": ["Research Team"],
+      "dateCreated": "2024-Q2",
+      "lastModified": "2024-Q3",
+      "size": "1.0MB", 
+      "pageCount": 40,
+      "language": "English",
+      "dependencies": {
+        "conceptual": ["CFH_01", "CFH_04", "HQT_01"],
+        "technical": ["observer theory", "reality construction"],
+        "methodological": ["theoretical synthesis"]
+      },
+      "crossReferences": {
+        "citedBy": ["QCA_Complete", "CFH_06"],
+        "cites": ["CFH_01", "CFH_04", "HQT_01"],
+        "relatedConcepts": ["observer effects", "reality architecture", "consciousness causation"],
+        "relatedDocuments": ["CFH_01", "CFH_04", "HQT_01"]
+      },
+      "research": {
+        "methodology": "observer theory development",
+        "approach": "consciousness-reality interaction analysis",
+        "validation": "theoretical consistency verification",
+        "applications": ["QCA observer effects", "Reality construction modeling"]
+      },
+      "accessibility": {
+        "technicalLevel": "Advanced",
+        "prerequisites": ["CFH_01-04", "observer theory", "consciousness studies"],
+        "readingTime": "80 minutes"
+      }
+    }
+  ],
+  "relationships": {
+    "citationNetwork": {
+      "CFH_01": {
+        "citedBy": ["CFH_02", "CFH_03", "CFH_04", "CFH_05", "CFH_06", "HQT_01", "OBS_01", "QCA_Main_v1", "NEX_Main_v1"],
+        "cites": [],
+        "citationCount": 9,
+        "impact": "foundational"
+      },
+      "CFH_05": {
+        "citedBy": ["QCA_v2", "QCA_v3", "QCA_Complete", "NEX_v2", "HQT_02"],
+        "cites": ["CFH_01", "CFH_02", "CFH_03", "CFH_04"],
+        "citationCount": 5,
+        "impact": "integrative"
+      }
+    },
+    "dependencyChains": [
+      {
+        "chain": ["CFH_01", "CFH_02", "CFH_03", "CFH_05", "QCA_Complete"],
+        "type": "theoretical_development"
+      },
+      {
+        "chain": ["CFH_01", "CFH_04", "CFH_06", "HQT_01", "OBS_01"],
+        "type": "ontological_development"
+      },
+      {
+        "chain": ["CFH_03", "QCA_Main_v1", "QCA_v2", "QCA_v3", "QCA_Complete"],
+        "type": "application_development"
+      }
+    ],
+    "conceptualClusters": [
+      {
+        "name": "Core CFH Framework",
+        "documents": ["CFH_01", "CFH_02", "CFH_03", "CFH_05"],
+        "centralConcepts": ["consciousness field", "participatory physics", "field amplification"]
+      },
+      {
+        "name": "Temporal Frameworks", 
+        "documents": ["HQT_01", "HQT_02", "CFH_04"],
+        "centralConcepts": ["hyperchronal effects", "time recursion", "temporal paradoxes"]
+      },
+      {
+        "name": "Observer Theory",
+        "documents": ["OBS_01", "CFH_01", "CFH_06"],
+        "centralConcepts": ["observer-architect", "consciousness causation", "reality construction"]
+      }
+    ]
+  },
+  "searchIndex": {
+    "terms": {
+      "consciousness": {
+        "frequency": 147,
+        "documents": ["CFH_01", "CFH_02", "CFH_03", "CFH_04", "CFH_05", "CFH_06", "CFH_07", "CFH_08", "CFH_09", "HQT_01", "HQT_02", "OBS_01"],
+        "weight": 1.0
+      },
+      "field": {
+        "frequency": 89,
+        "documents": ["CFH_01", "CFH_02", "CFH_03", "CFH_05", "CFH_07", "QCA_Scalar"],
+        "weight": 0.9
+      },
+      "quantum": {
+        "frequency": 76,
+        "documents": ["HQT_01", "HQT_02", "QCA_Main_v1", "QCA_v2", "QCA_v3", "QCA_Complete"],
+        "weight": 0.8
+      },
+      "amplification": {
+        "frequency": 45,
+        "documents": ["CFH_03", "QCA_Main_v1", "QCA_v2", "QCA_v3", "QCA_Complete"],
+        "weight": 0.7
+      },
+      "observer": {
+        "frequency": 38,
+        "documents": ["OBS_01", "CFH_01", "CFH_04", "HQT_01"],
+        "weight": 0.6
+      }
+    },
+    "phrases": {
+      "consciousness field hypothesis": {
+        "frequency": 34,
+        "documents": ["CFH_01", "CFH_02", "CFH_03", "CFH_04", "CFH_05"],
+        "weight": 1.0
+      },
+      "quantum consciousness amplification": {
+        "frequency": 28,
+        "documents": ["QCA_Main_v1", "QCA_v2", "QCA_v3", "QCA_Complete"],
+        "weight": 0.9
+      },
+      "participatory physics": {
+        "frequency": 22,
+        "documents": ["CFH_01", "CFH_02", "OBS_01"],
+        "weight": 0.8
+      }
+    }
+  },
+  "statistics": {
+    "documentCounts": {
+      "byCategory": {
+        "CFH": 9,
+        "HQT": 2, 
+        "OBS": 1,
+        "QCA": 8,
+        "NEX": 7,
+        "ECU": 4,
+        "AI": 9,
+        "Code": 4,
+        "External": 4,
+        "Archive": 99
+      },
+      "byType": {
+        "PDF": 98,
+        "Markdown": 12,
+        "Text": 23,
+        "Python": 2,
+        "CSV": 3,
+        "LaTeX": 9
+      },
+      "byPhase": {
+        "Foundation": 4,
+        "Expansion": 4,
+        "Application": 3,
+        "Implementation": 2,
+        "Validation": 1
+      }
+    },
+    "averages": {
+      "documentSize": "1.2MB",
+      "pageCount": 45,
+      "readingTime": "85 minutes",
+      "crossReferences": 3.2
+    },
+    "totals": {
+      "totalSize": "176.4MB",
+      "totalPages": 1847,
+      "totalCrossReferences": 156
+    }
+  },
+  "usage": {
+    "apiEndpoints": {
+      "search": "/api/search?q={query}&category={category}&type={type}",
+      "document": "/api/document/{id}",
+      "crossrefs": "/api/crossrefs/{id}",
+      "dependencies": "/api/dependencies/{id}",
+      "citations": "/api/citations/{id}"
+    },
+    "examples": {
+      "searchByKeyword": "consciousness field hypothesis",
+      "searchByCategory": "CFH",
+      "searchByType": "PDF",
+      "getCrossReferences": "CFH_01",
+      "getDependencies": "QCA_Complete"
+    }
+  }
+}
